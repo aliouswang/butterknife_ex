@@ -5,7 +5,6 @@ import com.google.auto.service.AutoService;
 import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.TypeSpec;
-import com.sun.tools.javah.Gen;
 
 import java.lang.annotation.Annotation;
 import java.util.HashMap;
@@ -70,7 +69,7 @@ public class ButterKnifeProcessor extends AbstractProcessor {
 
             GeneratorCodeProxy proxy = mProxyHashMap.get(packageName);
             if (proxy == null) {
-                proxy = new GeneratorCodeProxy(mElements, packageName, classElement.getQualifiedName().toString());
+                proxy = new GeneratorCodeProxy(mFiler, mElements, packageName, classElement.getSimpleName().toString());
                 mProxyHashMap.put(packageName, proxy);
             }
 

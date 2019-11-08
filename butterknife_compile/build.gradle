@@ -7,6 +7,8 @@ dependencies {
     annotationProcessor deps.auto.service
     implementation deps.javapoet
     implementation project(path: ':butterknife_annotation')
+
+    implementation deps.androidx.core
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_8

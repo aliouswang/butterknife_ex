@@ -9,10 +9,10 @@ buildscript {
                 'annotations': "androidx.annotation:annotation:1.0.0",
         ],
         'auto': [
-                'service': 'com.google.auto.service:auto-service:1.0-rc4',
+                'service': 'com.google.auto.service:auto-service:1.0-rc2',
                 'common': 'com.google.auto:auto-common:0.10',
         ],
-        javapoet: 'com.squareup:javapoet:1.10.0',
+        javapoet: 'com.squareup:javapoet:1.7.0',
     ]
 
     repositories {
